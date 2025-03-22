@@ -48,8 +48,8 @@
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/zoomer.git
-   cd zoomer
+   git clone https://github.com/voidCaloneian/hyprctl_magnifier/tree/main
+   cd hyprctl_magnifier
    ```
 
 2. **Find the libevdev Header:**
