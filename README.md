@@ -3,6 +3,8 @@
 > [!NOTE]  
 > **Zoomer** is a C++ utility that intercepts input events, adjusts a zoom level using `hyprctl`, and forwards mouse events through a virtual device. It supports a configuration file to automatically select input devices on startup.
 
+![Zoomer demonstration](./preview.gif)
+
 ## Table of Contents
 
 - [Zoomer - Input Event Zoom Manager](#zoomer---input-event-zoom-manager)
@@ -86,7 +88,8 @@
 1. **Run the Application with Elevated Privileges:**
 
    ```bash
-   sudo ./zoomer
+   sudo ./zoomer # Or Try without if you have 
+                 # The HYRPLAND_INSTANCE_SIGNATURE problem
    ```
 
 2. **Device Selection (On First Run):**  
