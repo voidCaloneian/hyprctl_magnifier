@@ -1,13 +1,13 @@
-# Zoomer - Input Event Zoom Manager
+# hyprctl_magnifier - Input Event Zoom Manager
 
 > [!NOTE]  
-> **Zoomer** is a C++ utility that intercepts input events, adjusts a zoom level using `hyprctl`, and forwards mouse events through a virtual device. It supports a configuration file to automatically select input devices on startup.
+> **hyprctl_magnifier** is a C++ utility that intercepts input events, adjusts a zoom level using `hyprctl`, and forwards mouse events through a virtual device. It supports a configuration file to automatically select input devices on startup.
 
-![Zoomer demonstration](./preview.gif)
+![hyprctl_magnifier demonstration](./preview.gif)
 
 ## Table of Contents
 
-- [Zoomer - Input Event Zoom Manager](#zoomer---input-event-zoom-manager)
+- [hyprctl\_magnifier - Input Event Zoom Manager](#hyprctl_magnifier---input-event-zoom-manager)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Requirements](#requirements)
@@ -34,7 +34,7 @@
 
 > [!IMPORTANT]  
 > **Running as Root:**  
-> Due to the nature of intercepting input events and creating uinput devices, **Zoomer** requires root privileges. Always run with caution.
+> Due to the nature of intercepting input events and creating uinput devices, **hyprctl_magnifier** requires root privileges. Always run with caution.
 
 ## Requirements
 
@@ -73,7 +73,7 @@
    Use the path found above to include the proper directory when compiling. For example, if the output is as shown above, compile with:
 
    ```bash
-   g++ -std=c++11 -pthread -I/usr/include/libevdev-1.0 -o zoomer zoomer.cpp -levdev
+   g++ -std=c++11 -pthread -I/usr/include/libevdev-1.0 -o hyprctl_magnifier hyprctl_magnifier.cpp -levdev
    ```
 
    > [!WARNING]  
@@ -88,7 +88,7 @@
 1. **Run the Application with Elevated Privileges:**
 
    ```bash
-   sudo ./zoomer # Or Try without if you have 
+   sudo ./hyprctl_magnifier # Or Try without if you have 
                  # The HYRPLAND_INSTANCE_SIGNATURE problem
    ```
 
@@ -111,7 +111,7 @@ keyboard=Your Keyboard Device Name
 mouse=Your Mouse Device Name
 ```
 
-On subsequent launches, **Zoomer** will automatically look for these devices in `/dev/input` by matching the device names and, if found, will use them without prompting.
+On subsequent launches, **hyprctl_magnifier** will automatically look for these devices in `/dev/input` by matching the device names and, if found, will use them without prompting.
 
 ## Finding libevdev
 
@@ -130,7 +130,7 @@ For example, you might see:
 Based on this result, compile the application using:
 
 ```bash
-g++ -std=c++11 -pthread -I/usr/include/libevdev-1.0 -o zoomer zoomer.cpp -levdev
+g++ -std=c++11 -pthread -I/usr/include/libevdev-1.0 -o hyprctl_magnifier hyprctl_magnifier.cpp -levdev
 ```
 
 This ensures that the compiler correctly locates the necessary header file.
@@ -166,4 +166,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ---
 
 Happy Coding! 😊  
-Feel free to open an issue or submit a pull request if you have ideas for improvements. Enjoy using **Zoomer**!
+Feel free to open an issue or submit a pull request if you have ideas for improvements. Enjoy using **hyprctl_magnifier**!
