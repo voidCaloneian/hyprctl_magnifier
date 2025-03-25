@@ -96,9 +96,11 @@ int create_uinput_device() {
         return -1;
     }
 
-    // Enable mouse buttons (left, right, and middle)
+    // Enable mouse buttons (left, right, and middle, mouse4, mouse5)
     if (ioctl(uinput_fd, UI_SET_KEYBIT, BTN_LEFT) < 0 ||
         ioctl(uinput_fd, UI_SET_KEYBIT, BTN_RIGHT) < 0 ||
+        ioctl(uinput_fd, UI_SET_KEYBIT, BTN_SIDE) < 0 ||
+        ioctl(uinput_fd, UI_SET_KEYBIT, BTN_EXTRA) < 0 || 
         ioctl(uinput_fd, UI_SET_KEYBIT, BTN_MIDDLE) < 0) {
         perror("ioctl UI_SET_KEYBIT BTN_*");
         return -1;
